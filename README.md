@@ -1,0 +1,2 @@
+# MxShop
+django+vue.js
