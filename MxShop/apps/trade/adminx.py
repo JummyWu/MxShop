@@ -1,16 +1,21 @@
 # -*- coding: utf-8 -*-
-__author__ = 'bobby'
+__author__ = 'jummy'
 
 import xadmin
 from .models import ShoppingCart, OrderInfo, OrderGoods
+
 
 class ShoppingCartAdmin(object):
     list_display = ["user", "goods", "nums", ]
 
 
 class OrderInfoAdmin(object):
-    list_display = ["user", "order_sn",  "trade_no", "pay_status", "post_script", "order_mount",
-                    "order_mount", "pay_time", "add_time"]
+    list_display = [
+        "user", "order_sn", "trade_no",
+        "pay_status", "post_script",
+        "order_mount", "order_mount",
+        "pay_time", "add_time"
+    ]
 
     class OrderGoodsInline(object):
         model = OrderGoods
